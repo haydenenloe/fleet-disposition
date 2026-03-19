@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #0F172A;
+  --bg-card: #1E293B;
+  --border: #334155;
+  --blue: #3B82F6;
+  --text: #F1F5F9;
+  --muted: #94A3B8;
+  --success: #22C55E;
+  --warning: #F59E0B;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0F172A;
+  color: #F1F5F9;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+}
+
+/* Form input styles */
+.form-input {
+  @apply w-full bg-[#0F172A] border border-[#334155] text-[#F1F5F9] rounded-lg px-4 py-2.5
+         focus:outline-none focus:ring-2 focus:ring-[#3B82F6] focus:border-transparent
+         placeholder-[#94A3B8] text-sm;
+}
+
+.form-label {
+  @apply block text-sm font-medium text-[#94A3B8] mb-1.5;
+}
+
+.btn-primary {
+  @apply bg-[#3B82F6] hover:bg-blue-500 text-white font-semibold px-5 py-2.5 rounded-lg
+         transition-colors duration-150 text-sm;
+}
+
+.btn-outline {
+  @apply border border-[#334155] hover:border-[#3B82F6] text-[#F1F5F9] font-medium px-5 py-2.5
+         rounded-lg transition-colors duration-150 text-sm;
+}
+
+.card {
+  @apply bg-[#1E293B] border border-[#334155] rounded-xl shadow-lg;
+}
